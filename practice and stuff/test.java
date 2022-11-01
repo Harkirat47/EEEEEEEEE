@@ -8,6 +8,9 @@ public class test{
          String x = scanner.nextLine();
 
          System.out.println("your name is"+ x);
+         
+         
+         //ez
 
 
     }
