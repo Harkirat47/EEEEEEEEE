@@ -36,8 +36,6 @@ public class RobotContainer {
   private final upshoot m_upshoot = new upshoot(m_shooter);
 
   private final lowershoot m_lowshoot = new lowershoot(m_shooter);
-
-  private final drivetrain drive = new drivetrain();
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure  the button bindings
@@ -47,7 +45,6 @@ public class RobotContainer {
 
   private void configureButtonBindings() {
     XboxController pilot = new XboxController(0);
-    drive.setDefaultCommand(new DT(drive, pilot::getLeftY, pilot::getRightX));
     JoystickButton A = new JoystickButton(pilot, Button.kA.value);
     JoystickButton B = new JoystickButton(pilot, Button.kB.value);
     A.whenHeld(m_upshoot);
